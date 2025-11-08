@@ -1,2 +1,2 @@
-# mijn-website
+# portfolio
 Mijn eerste website
