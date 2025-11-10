@@ -1,60 +1,112 @@
-<!DOCTYPE html>
-<html lang="nl-BE">
-
+<!doctype html>
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
-  <!-- resetten van browsers -->
-  <link rel="stylesheet" href="css/reset.css">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- JavaScript: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
-    </script>
-  <!-- eigen geschreven css voor jouw html-bestand -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home | Mijn Portfolio</title>
 
-<body class="p-3 m-0 border-0 bd-example">
-  <nav class="navbar navbar-expand-md bg-light container-fluid">
-    <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="POWER web" width="100" height="100">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href=" #">shop</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">subpagina 1</a></li>
-            <li><a class="dropdown-item" href="#">subpagina 2</a></li>
-            <li><a class="dropdown-item" href="#">subpagina 3</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="contact.html">contact</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="zoeken" aria-label="Search">
-        <button class="btn btn-sm btn-outline-secondary" type="submit">zoeken</button>
-      </form>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MijnLogo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projecten.html">Projecten</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container text-center">
+      <h1>Welkom op mijn portfolio</h1>
+      <p>Ontdek mijn projecten en creaties</p>
+      <a href="projecten.html" class="btn btn-main mt-3">Bekijk mijn werk</a>
+    </div>
+  </section>
+
+  <!-- OVER MIJ -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="Assets/placeholderpfp.jpg" class="img-fluid rounded" alt="Mijn foto">
+        </div>
+        <div class="col-md-6">
+          <h2 class="mb-3">Over mij</h2>
+          <p>Ik ben Samira Vandormael, studente Systeem- en Netwerkbeheer met een sterke interesse in technologie en netwerkinfrastructuren. Wat begon als nieuwsgierigheid is uitgegroeid tot een passie die ik tijdens mijn opleiding verder ontwikkel.
+          Ik ben gedreven, leergierig en sociaal, en werk graag samen aan efficiënte oplossingen. Nieuwe uitdagingen zie ik als kansen om mijn kennis te verdiepen en mijn vaardigheden te versterken.
+          Mijn ambitie is om uit te groeien tot een bekwame IT-professioneel die technologie en samenwerking combineert om duurzame resultaten te behalen.</p>
+          
+          
+          <ul class="list-inline socials mt-3">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN" target="_blank">
+                <i class="bi bi-linkedin fs-3"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/SamiraVandormael" target="_blank">
+                <i class="bi bi-github fs-3"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="bi bi-instagram fs-3"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/" target="_blank">
+                <i class="bi bi-twitter fs-3"></i>
+              </a>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-main mt-3">Neem contact op</a>
+          
+        </div>
+      </div>
+
+          
+
+    </div>
+  </section>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <p class="mb-1">© <span id="year"></span> <span class="footer-name">Samira Vandormael</span></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.instagram.com/s.samira_06/"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/SamiraVandormael"><i class="bi bi-github"></i></a>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    window.addEventListener("scroll", function(){
+      const nav = document.querySelector(".navbar");
+      if(window.scrollY > 50){
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
 </html>
