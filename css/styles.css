@@ -40,6 +40,13 @@ body {
   font-weight: 600;
 }
 
+.navbar-collapse.show {
+  background: var(--dark);
+
+}
+.navbar.menu-open {
+  background: var(--dark) !important;
+}
 /* ===================================
    HERO (ALGEMEEN)
 =================================== */
@@ -381,3 +388,5 @@ p {
   gap: 1rem;
   color: #4a5030;
 }
+
+

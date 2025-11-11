@@ -123,6 +123,17 @@
         nav.classList.remove("scrolled");
       }
     });
+    const nav = document.querySelector(".navbar");
+    const navmenu = document.getElementById("navmenu");
+
+    if (nav && navmenu) {
+      navmenu.addEventListener("show.bs.collapse", function () {
+        nav.classList.add("menu-open");
+      });
+      navmenu.addEventListener("hide.bs.collapse", function () {
+        nav.classList.remove("menu-open");
+      });
+    }
   </script>
 
 </body>
