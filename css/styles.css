@@ -5,11 +5,14 @@
   --green: #5c6338;
   --beige: #faf6f0;
   --dark: #36232e;
+  --dark-green: #2a2f1d;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--beige);
+  margin: 0;
+  padding: 0;
 }
 
 .green { color: var(--green); }
@@ -20,7 +23,7 @@ body {
 =================================== */
 .navbar {
   background: transparent;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -38,7 +41,7 @@ body {
 }
 
 /* ===================================
-   HERO
+   HERO (ALGEMEEN)
 =================================== */
 .hero {
   height: 60vh;
@@ -47,6 +50,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .hero h1 {
@@ -60,8 +64,13 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.hero h1,
+.hero p,
+.hero a {
+  color: #fff !important;
+}
 /* ===================================
-   OVER MIJ / ALGEMEEN
+   TEKST & TITELS
 =================================== */
 h2 {
   color: var(--dark);
@@ -94,7 +103,7 @@ p {
 
 .btn-main:hover {
   background: var(--green);
-  color: #2a2f1d; /* tekst wordt donkerder groen bij hover */
+  color: #2a2f1d;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
 }
@@ -114,6 +123,17 @@ p {
 .btn-outline-main:hover {
   background: var(--green);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
+}
+.hero .btn-main:hover {
+  color: #2a2f1d !important; /* donkergroen */
+}
+
+.btn-outline-main:hover {
+  background: var(--green);
+  color: #2a2f1d !important;
+  border-color: var(--green);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
 }
@@ -183,11 +203,11 @@ p {
 }
 
 /* ===================================
-   PROJECT PAGINA
+   PROJECT PAGINA HERO
 =================================== */
 .project-hero {
   height: 70vh;
-  background: linear-gradient(135deg, var(--dark) 0%, #4a5030 100%);
+  background: url('../Assets/hero-project.jpg') center center/cover no-repeat;
   color: white;
   display: flex;
   align-items: center;
@@ -200,35 +220,30 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80') center/cover;
-  opacity: 0.15;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .project-hero-content {
   position: relative;
   z-index: 1;
   max-width: 800px;
+  text-align: center;
 }
 
-.project-meta {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
+.project-hero-content h1 {
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.7);
 }
 
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
+.project-hero-content p {
+  color: #f5f5f5;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-.meta-item i {
-  font-size: 1.2rem;
-  color: var(--green);
-}
 
+/* ===================================
+   PROJECT PAGINA INHOUD
+=================================== */
 .project-content {
   padding: 5rem 0;
 }
@@ -276,124 +291,6 @@ p {
   border-radius: 2px;
 }
 
-/* ===================================
-   LIJSTEN & OVERIGE ELEMENTEN
-=================================== */
-.feature-list {
-  list-style: none;
-  padding: 0;
-}
-
-.feature-list li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  align-items: start;
-}
-
-.feature-list li:last-child {
-  border-bottom: none;
-}
-
-.feature-list li i {
-  color: var(--green);
-  margin-right: 1rem;
-  margin-top: 0.25rem;
-  font-size: 1.2rem;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.back-link {
-  color: var(--green);
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  transition: all 0.3s;
-}
-
-.back-link:hover {
-  gap: 1rem;
-  color: #4a5030;
-}
-
-/* ===================================
-   GALLERY & CHALLENGES
-=================================== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
-
-.challenge-box {
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 15px;
-  border-left: 5px solid var(--green);
-  margin: 2rem 0;
-}
-
-.challenge-box h4 {
-  color: var(--dark);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-/* ===================================
-   INDIVIDUELE PROJECT PAGINA’S
-=================================== */
-.project-hero {
-  height: 70vh;
-  background: linear-gradient(135deg, var(--dark) 0%, #4a5030 100%);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80') center/cover;
-  opacity: 0.15;
-}
-
-.project-hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
 .project-meta {
   display: flex;
   gap: 2rem;
@@ -414,69 +311,9 @@ p {
   color: var(--green);
 }
 
-.project-content {
-  padding: 5rem 0;
-}
-
-.project-image {
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  margin-bottom: 3rem;
-  width: 100%;
-  height: auto;
-}
-
-.tech-badge {
-  display: inline-block;
-  background: var(--green);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 50px;
-  margin: 5px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.project-section {
-  margin-bottom: 4rem;
-}
-
-.project-section h3 {
-  color: var(--dark);
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.project-section h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 60px;
-  height: 4px;
-  background: var(--green);
-  border-radius: 2px;
-}
-
-.back-link {
-  color: var(--green);
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  transition: all 0.3s;
-}
-
-.back-link:hover {
-  gap: 1rem;
-  color: #4a5030;
-}
-
+/* ===================================
+   GALLERY
+=================================== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -488,7 +325,7 @@ p {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
@@ -502,6 +339,9 @@ p {
   display: block;
 }
 
+/* ===================================
+   CHALLENGE / EXTRA BOXES
+=================================== */
 .challenge-box {
   background: #f8f9fa;
   padding: 2rem;
@@ -516,9 +356,28 @@ p {
   margin-bottom: 1rem;
 }
 
+/* ===================================
+   LINKS
+=================================== */
 .project-links {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+}
+
+.back-link {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  gap: 1rem;
+  color: #4a5030;
 }
