@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Home | Mijn Portfolio</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -24,7 +24,20 @@
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="projecten.html">Projecten</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projecten
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectenDropdown">
+              <li><a class="dropdown-item" href="projecten.html">Alle Projecten</a></li>
+              <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+              <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+              <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+              <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+              <li><a class="dropdown-item" href="project5.html">Project 5</a></li>
+              <li><a class="dropdown-item" href="project6.html">Project 6</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -43,74 +56,46 @@
 
   <!-- OVER MIJ -->
   <section style="padding: 4rem 0;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="Assets/foto.jpg" class="img-fluid rounded" alt="Mijn foto">
-        </div>
-        <div class="col-md-6">
-          <h2 class="mb-3">Over mij</h2>
-          <p>Ik ben Samira Vandormael, studente Systeem- en Netwerkbeheer met een sterke interesse in technologie en netwerkinfrastructuren. Wat begon als nieuwsgierigheid is uitgegroeid tot een passie die ik tijdens mijn opleiding verder ontwikkel.
-          Ik ben gedreven, leergierig en sociaal, en werk graag samen aan efficiënte oplossingen. Nieuwe uitdagingen zie ik als kansen om mijn kennis te verdiepen en mijn vaardigheden te versterken.
-          Mijn ambitie is om uit te groeien tot een bekwame IT-professioneel die technologie en samenwerking combineert om duurzame resultaten te behalen.</p>
-          
-          
-          <ul class="list-inline socials mt-3">
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN" target="_blank">
-                <i class="bi bi-linkedin fs-3"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/SamiraVandormael" target="_blank">
-                <i class="bi bi-github fs-3"></i>
-              </a>
-            </li>
-          </ul>
-          <a href="contact.html" class="btn btn-main mt-3">Neem contact op</a>
-          
-        </div>
-      </div>
-
-          
-
-    </div>
-  </section>
+  <div class="container">
+    <article class="row align-items-center">
+      <img src="Assets/foto.jpg" class="col-md-4 img-fluid rounded" alt="Mijn foto">
+      
+      <section class="col-md-8">
+        <h2 class="mb-3">Over mij</h2>
+        <p>Ik ben Samira Vandormael, studente Systeem- en Netwerkbeheer met een sterke interesse in technologie en netwerkinfrastructuren. Wat begon als nieuwsgierigheid is uitgegroeid tot een passie die ik tijdens mijn opleiding verder ontwikkel.
+        Ik ben gedreven, leergierig en sociaal, en werk graag samen aan efficiënte oplossingen. Nieuwe uitdagingen zie ik als kansen om mijn kennis te verdiepen en mijn vaardigheden te versterken.
+        Mijn ambitie is om uit te groeien tot een bekwame IT-professionaal die technologie en samenwerking combineert om duurzame resultaten te behalen.</p>
+        
+        <ul class="list-inline socials mt-3">
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN" target="_blank">
+              <i class="bi bi-linkedin fs-3"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/SamiraVandormael" target="_blank">
+              <i class="bi bi-github fs-3"></i>
+            </a>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-main mt-3">Neem contact op</a>
+      </section>
+    </article>
+  </div>
+</section>
 
 <!-- FOOTER -->
   <footer class="footer">
-    <p class="mb-1">© <span id="year"></span> <span class="footer-name">Samira Vandormael</span></p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN"><i class="bi bi-linkedin"></i></a>
-
-      <a href="https://github.com/SamiraVandormael"><i class="bi bi-github"></i></a>
-    </div>
-  </footer>
+  <p class="mb-1">© <span id="year"></span> <span class="footer-name">Samira Vandormael</span></p>
+  <nav class="social-links">
+    <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/SamiraVandormael"><i class="bi bi-github"></i></a>
+  </nav>
+</footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  <script src="js/script.js"></script>
 
-    window.addEventListener("scroll", function(){
-      const nav = document.querySelector(".navbar");
-      if(window.scrollY > 50){
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    });
-    const nav = document.querySelector(".navbar");
-    const navmenu = document.getElementById("navmenu");
-
-    if (nav && navmenu) {
-      navmenu.addEventListener("show.bs.collapse", function () {
-        nav.classList.add("menu-open");
-      });
-      navmenu.addEventListener("hide.bs.collapse", function () {
-        nav.classList.remove("menu-open");
-      });
-    }
-  </script>
 </body>
 </html>

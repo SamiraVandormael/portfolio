@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact | Mijn Portfolio</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -19,6 +19,7 @@
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/map.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +36,20 @@
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="projecten.html">Projecten</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projecten
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectenDropdown">
+              <li><a class="dropdown-item" href="projecten.html">Alle Projecten</a></li>
+              <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+              <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+              <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+              <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+              <li><a class="dropdown-item" href="project5.html">Project 5</a></li>
+              <li><a class="dropdown-item" href="project6.html">Project 6</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -44,59 +58,47 @@
 
   <!-- HERO -->
   <section class="project-hero text-center">
-    <div class="project-hero-content">
+    <header class="project-hero-content">
       <h1>Neem contact op</h1>
       <p>Heb je een vraag of wil je samenwerken? Laat van je horen!</p>
-    </div>
+    </header>
   </section>
 
   <!-- CONTACT FORM -->
   <section class="project-content">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5">
-            <h2 class="text-center mb-4 fw-bold">Stuur mij een bericht</h2>
-            <p class="text-center text-muted mb-5">Vul het formulier in en ik neem zo snel mogelijk contact met je op.</p>
+      <article class="row justify-content-center">
+        <form 
+          class="col-lg-8 card shadow-lg border-0 rounded-4 p-4 p-md-5"
+          name="contact" 
+          method="POST" 
+          data-netlify="true" 
+          data-netlify-recaptcha="true"
+          netlify-honeypot="bot-field">
 
-          <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-recaptcha="true"
-              netlify-honeypot="bot-field">
+          <h2 class="text-center mb-4 fw-bold">Stuur mij een bericht</h2>
+          <p class="text-center text-muted mb-5">Vul het formulier in en ik neem zo snel mogelijk contact met je op.</p>
 
-            <div class="mb-3">
-              <label for="name" class="form-label fw-semibold">Naam</label>
-              <input type="text" class="form-control rounded-3" name="name" id="name" placeholder="Jouw naam" required>
+          <label for="name" class="form-label fw-semibold">Naam</label>
+          <input type="text" class="form-control rounded-3 mb-3" name="name" id="name" placeholder="Jouw naam" required>
+
+          <label for="email" class="form-label fw-semibold">E-mail</label>
+          <input type="email" class="form-control rounded-3 mb-3" name="email" id="email" placeholder="jouw@email.com" required>
+
+          <label for="subject" class="form-label fw-semibold">Onderwerp</label>
+          <input type="text" class="form-control rounded-3 mb-3" name="subject" id="subject" placeholder="Onderwerp" required>
+
+          <label for="message" class="form-label fw-semibold">Bericht</label>
+          <textarea class="form-control rounded-3 mb-4" name="message" id="message" rows="6" placeholder="Jouw bericht..." required></textarea>
+
+          <!-- reCAPTCHA -->
+          <div class="mb-4 text-center" data-netlify-recaptcha="true"></div>
+            <button type="submit" class="btn btn-main px-5 py-2 d-block mx-auto">
+                <i class="bi bi-send"></i> Verstuur
+            </button>
             </div>
-
-            <div class="mb-3">
-              <label for="email" class="form-label fw-semibold">E-mail</label>
-              <input type="email" class="form-control rounded-3" name="email" id="email" placeholder="jouw@email.com" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="subject" class="form-label fw-semibold">Onderwerp</label>
-              <input type="text" class="form-control rounded-3" name="subject" id="subject" placeholder="Onderwerp" required>
-            </div>
-
-            <div class="mb-4">
-              <label for="message" class="form-label fw-semibold">Bericht</label>
-              <textarea class="form-control rounded-3" name="message" id="message" rows="6" placeholder="Jouw bericht..." required></textarea>
-            </div>
-
-            <!-- reCAPTCHA -->
-            <div class="mb-4 text-center" data-netlify-recaptcha="true"></div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-main px-5 py-2">
-                  <i class="bi bi-send"></i> Verstuur
-                </button>
-              </div>
-          </form>
-          </div>
-        </div>
-      </div>
+        </form>
+      </article>
     </div>
   </section>
 
@@ -108,15 +110,15 @@
         
         <div class="col-md-4">
           <div class="contact-card p-4 rounded-4 h-100 shadow-sm">
-            <div class="icon mb-3 text-main fs-1"><i class="bi bi-envelope-fill"></i></div>
+            <div class="icon mb-3 text-main fs-1"><i class="bi bi-envelope"></i></div>
             <h5 class="fw-semibold">E-mail</h5>
-            <a href="mailto:sa.vandormael@gmail.com" class="text-decoration-none">sa.vandormael@gmail.com</a>
+            <a href="mailto:sa.vandormael@gmail.com" class="text-decoration-none dark">sa.vandormael@gmail.com</a>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="contact-card p-4 rounded-4 h-100 shadow-sm">
-            <div class="icon mb-3 text-main fs-1"><i class="bi bi-telephone-fill"></i></div>
+            <div class="icon mb-3 text-main fs-1"><i class="bi bi-telephone"></i></div>
             <h5 class="fw-semibold">Telefoon</h5>
             <p class="mb-0">+32 123 456 789</p>
           </div>
@@ -132,6 +134,7 @@
     </div>
   </section>
 
+
 <!-- FOOTER -->
   <footer class="footer">
     <p class="mb-1">© <span id="year"></span> <span class="footer-name">Samira Vandormael</span></p>
@@ -143,51 +146,6 @@
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    window.addEventListener("scroll", function(){
-      const nav = document.querySelector(".navbar");
-      if(window.scrollY > 50){
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    });
-    const nav = document.querySelector(".navbar");
-    const navmenu = document.getElementById("navmenu");
-
-    if (nav && navmenu) {
-      navmenu.addEventListener("show.bs.collapse", function () {
-        nav.classList.add("menu-open");
-      });
-      navmenu.addEventListener("hide.bs.collapse", function () {
-        nav.classList.remove("menu-open");
-      });
-    }
-  </script>
-  <script>
- 
-  const map = L.map('map').setView([51.218266, 4.127924], 14); 
- 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-  }).addTo(map);
-
-  // Custom logo marker
-  const logoIcon = L.icon({
-    iconUrl: 'assets/logo.png',
-    iconSize: [50, 50],     
-    iconAnchor: [25, 50],   
-    popupAnchor: [0, -50]
-  });
-
-  // Plaats marker
-  L.marker([51.218266, 4.127924], { icon: logoIcon })
-    .addTo(map)
-    .bindPopup("Sint-Gillis-Waas")
-    .openPopup();
-</script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>

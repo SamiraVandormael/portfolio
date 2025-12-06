@@ -1,6 +1,4 @@
-/* ===================================
-   KLEUREN & BASIS
-=================================== */
+/* KLEUREN & BASIS */
 :root {
   --green: #5c6338;
   --beige: #faf6f0;
@@ -18,38 +16,53 @@ body {
 .green { color: var(--green); }
 .dark { color: var(--dark); }
 
-/* ===================================
-   NAVIGATIE
-=================================== */
+/* NAVIGATIE */
 .navbar {
   background: transparent;
   transition: all 0.3s ease;
 }
 
-.navbar.scrolled {
+.navbar.scrolled,
+.navbar.menu-open {
   background: var(--dark) !important;
+}
+
+.navbar.scrolled {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: #fff !important;
 }
 
 .nav-link.active {
-  color: var(--green) !important;
+  color: var(--beige) !important;
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: beige;
+  text-underline-offset: 5px;
 }
 
 .navbar-collapse.show {
   background: var(--dark);
+}
 
+.dropdown-menu {
+  background-color: var(--dark);
+  border: none;
 }
-.navbar.menu-open {
-  background: var(--dark) !important;
+
+.dropdown-item {
+  color: #fff;
 }
-/* ===================================
-   HERO (ALGEMEEN)
-=================================== */
+
+.dropdown-item:hover {
+  background-color: var(--dark);
+  color: #fff;
+}
+
+/* HERO */
 .hero {
   height: 60vh;
   background: var(--dark);
@@ -76,9 +89,8 @@ body {
 .hero a {
   color: #fff !important;
 }
-/* ===================================
-   TEKST & TITELS
-=================================== */
+
+/* TEKST & TITELS */
 h2 {
   color: var(--dark);
   font-weight: 700;
@@ -95,59 +107,47 @@ p {
   border-radius: 15px !important;
 }
 
-/* ===================================
-   BUTTONS
-=================================== */
+/* BUTTONS */
+.btn-main,
+.btn-outline-main {
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
 .btn-main {
   background: var(--green);
   color: white;
-  padding: 12px 32px;
-  border-radius: 50px;
-  border: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+}
+
+.btn-main:hover,
+.hero .btn-main:hover,
+.btn-outline-main:hover {
+  color: var(--dark-green) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
 }
 
 .btn-main:hover {
   background: var(--green);
-  color: #2a2f1d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
 }
 
 .btn-outline-main {
   border: 2px solid var(--green);
   color: var(--green);
-  padding: 12px 32px;
-  border-radius: 50px;
   background: transparent;
-  font-weight: 600;
-  transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
 }
 
 .btn-outline-main:hover {
   background: var(--green);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
-}
-.hero .btn-main:hover {
-  color: #2a2f1d !important; /* donkergroen */
-}
-
-.btn-outline-main:hover {
-  background: var(--green);
-  color: #2a2f1d !important;
   border-color: var(--green);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(92, 99, 56, 0.3);
 }
 
-/* ===================================
-   SOCIAL ICONS
-=================================== */
+/* SOCIAL ICONS */
 .socials a {
   color: var(--dark);
   margin-right: 10px;
@@ -188,9 +188,7 @@ p {
   font-size: 20px;
 }
 
-/* ===================================
-   FOOTER
-=================================== */
+/* FOOTER */
 .footer {
   background: var(--dark);
   color: #f2e4cf;
@@ -209,9 +207,7 @@ p {
   color: var(--green);
 }
 
-/* ===================================
-   PROJECT PAGINA HERO
-=================================== */
+/* PROJECT PAGINA */
 .project-hero {
   height: 70vh;
   background: url('../Assets/hero-project.jpg') center center/cover no-repeat;
@@ -247,10 +243,6 @@ p {
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-
-/* ===================================
-   PROJECT PAGINA INHOUD
-=================================== */
 .project-content {
   padding: 5rem 0;
 }
@@ -318,9 +310,7 @@ p {
   color: var(--green);
 }
 
-/* ===================================
-   GALLERY
-=================================== */
+/* GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -346,9 +336,7 @@ p {
   display: block;
 }
 
-/* ===================================
-   CHALLENGE / EXTRA BOXES
-=================================== */
+/* CHALLENGE BOX */
 .challenge-box {
   background: #f8f9fa;
   padding: 2rem;
@@ -363,9 +351,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* ===================================
-   LINKS
-=================================== */
+/* LINKS */
 .project-links {
   display: flex;
   gap: 1rem;
@@ -388,5 +374,3 @@ p {
   gap: 1rem;
   color: #4a5030;
 }
-
-

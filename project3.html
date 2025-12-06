@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Projecttitel | Mijn Portfolio</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -24,7 +24,20 @@
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="projecten.html">Projecten</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projecten
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectenDropdown">
+              <li><a class="dropdown-item " href="projecten.html">Alle Projecten</a></li>
+              <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+              <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+              <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+              <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+              <li><a class="dropdown-item" href="project5.html">Project 5</a></li>
+              <li><a class="dropdown-item" href="project6.html">Project 6</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -33,16 +46,15 @@
 
   <!-- HERO -->
   <section class="project-hero text-center">
-    <div class="project-hero-content">
-      <h1>Projecttitel</h1>
-      <div class="project-meta justify-content-center">
-        <div class="meta-item"><i class="bi bi-calendar-event"></i> Jaar</div>
-        <div class="meta-item"><i class="bi bi-tools"></i> Gebruikte tool(s)</div>
-        <div class="meta-item"><i class="bi bi-person"></i> Type project</div>
-      </div>
-    </div>
-  </section>
-
+  <header class="project-hero-content">
+    <h1>Projecttitel</h1>
+    <ul class="project-meta justify-content-center list-unstyled d-flex flex-wrap">
+      <li class="meta-item"><i class="bi bi-calendar-event"></i> Jaar</li>
+      <li class="meta-item"><i class="bi bi-tools"></i> Gebruikte tool(s)</li>
+      <li class="meta-item"><i class="bi bi-person"></i> Type project</li>
+    </ul>
+  </header>
+</section>
   <!-- PROJECT INHOUD -->
   <section class="project-content">
     <div class="container">
@@ -52,88 +64,64 @@
       <img src="#" alt="Project afbeelding" class="project-image">
 
       <!-- BESCHRIJVING -->
-      <div class="project-section">
+      <article class="project-section">
         <h3>Beschrijving</h3>
         <p>Beschrijf hier wat het project inhoudt, wat je doel was en welke resultaten je hebt bereikt.</p>
-      </div>
+      </article>
 
       <!-- TECHNOLOGIEËN -->
-      <div class="project-section">
+      <article class="project-section">
         <h3>Gebruikte technologieën</h3>
         <span class="tech-badge">Voorbeeldtechnologie</span>
         <span class="tech-badge">Nog een technologie</span>
-      </div>
-
+      </article>
       <!-- UITDAGINGEN -->
-      <div class="project-section">
+      <article class="project-section">
         <h3>Uitdagingen</h3>
-        <div class="challenge-box">
+        <section class="challenge-box">
           <h4>Voorbeelduitdaging</h4>
           <p>Beschrijf hier een uitdaging die je tegenkwam en hoe je deze hebt opgelost.</p>
-        </div>
-      </div>
+        </section>
+      </article>
 
       <!-- GALLERIJ -->
-      <div class="project-section">
-        <h3>Galerij</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="Assets/placeholder project.jpeg" alt="Afbeelding 1"></div>
-          <div class="gallery-item"><img src="Assets/placeholder project.jpeg" alt="Afbeelding 2"></div>
-          <div class="gallery-item"><img src="Assets/placeholder project.jpeg" alt="Afbeelding 3"></div>
-        </div>
-      </div>
+      <article class="project-section">
+      <h3>Galerij</h3>
+      <ul class="gallery-grid list-unstyled">
+        <li class="gallery-item"><img src="Assets/placeholder project.jpeg" alt="Afbeelding 1"></li>
+        <li class="gallery-item"><img src="Assets/placeholder project.jpeg" alt="Afbeelding 2"></li>
+        <li class="gallery-item"><img src="Assets/placeholder project.jpeg" alt="Afbeelding 3"></li>
+      </ul>
+    </article>
 
       <!-- LINKS -->
-      <div class="project-section">
+      <article class="project-section">
         <h3>Projectlinks</h3>
-        <div class="project-links">
+        <nav class="project-links">
           <a href="#" target="_blank" class="btn btn-outline-main">
             <i class="bi bi-github"></i> Bekijk op GitHub
           </a>
           <a href="projecten.html" class="btn btn-main">
             <i class="bi bi-arrow-left-circle"></i> Terug naar projecten
           </a>
-        </div>
-      </div>
+        </nav>
+      </article>
 
     </div>
   </section>
 
-  <<!-- FOOTER -->
+<!-- FOOTER -->
   <footer class="footer">
     <p class="mb-1">© <span id="year"></span> <span class="footer-name">Samira Vandormael</span></p>
-    <div class="social-links">
+    <nav class="social-links">
       <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN"><i class="bi bi-linkedin"></i></a>
       <a href="https://github.com/SamiraVandormael"><i class="bi bi-github"></i></a>
-    </div>
+    </nav>
   </footer>
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Navbar scroll effect
-    window.addEventListener("scroll", function(){
-      const nav = document.querySelector(".navbar");
-      if(window.scrollY > 50){
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    });
-    const nav = document.querySelector(".navbar");
-    const navmenu = document.getElementById("navmenu");
-
-    if (nav && navmenu) {
-      navmenu.addEventListener("show.bs.collapse", function () {
-        nav.classList.add("menu-open");
-      });
-      navmenu.addEventListener("hide.bs.collapse", function () {
-        nav.classList.remove("menu-open");
-      });
-    }
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
