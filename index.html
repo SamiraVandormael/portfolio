@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
 </head>
 <body>
 
@@ -29,7 +30,7 @@
               Projecten
             </a>
             <ul class="dropdown-menu" aria-labelledby="projectenDropdown">
-              <li><a class="dropdown-item" href="projecten.html">Alle Projecten</a></li>
+              <li><a class="dropdown-item" href="projecten.html">Overzicht</a></li>
               <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
               <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
               <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
@@ -55,35 +56,73 @@
   </section>
 
   <!-- OVER MIJ -->
-  <section style="padding: 4rem 0;">
-  <div class="container">
-    <article class="row align-items-center">
-      <img src="Assets/foto.jpg" class="col-md-4 img-fluid rounded" alt="Mijn foto">
-      
-      <section class="col-md-8">
-        <h2 class="mb-3">Over mij</h2>
-        <p>Ik ben Samira Vandormael, studente Systeem- en Netwerkbeheer met een sterke interesse in technologie en netwerkinfrastructuren. Wat begon als nieuwsgierigheid is uitgegroeid tot een passie die ik tijdens mijn opleiding verder ontwikkel.
-        Ik ben gedreven, leergierig en sociaal, en werk graag samen aan efficiënte oplossingen. Nieuwe uitdagingen zie ik als kansen om mijn kennis te verdiepen en mijn vaardigheden te versterken.
-        Mijn ambitie is om uit te groeien tot een bekwame IT-professionaal die technologie en samenwerking combineert om duurzame resultaten te behalen.</p>
-        
-        <ul class="list-inline socials mt-3">
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN" target="_blank">
-              <i class="bi bi-linkedin fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/SamiraVandormael" target="_blank">
-              <i class="bi bi-github fs-3"></i>
-            </a>
-          </li>
-        </ul>
-        <a href="contact.html" class="btn btn-main mt-3">Neem contact op</a>
-      </section>
-    </article>
-  </div>
-</section>
+  <section class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <article class="row align-items-center">
+            <section class="col-md-9">
+              <h2 class="mb-3">Over mij</h2>
+              <p>Ik ben Samira Vandormael, studente Systeem- en Netwerkbeheer met een sterke interesse in technologie en netwerkinfrastructuren. Wat begon als nieuwsgierigheid is uitgegroeid tot een passie die ik tijdens mijn opleiding verder ontwikkel.</p>
+              <p>Ik ben gedreven, leergierig en sociaal, en werk graag samen aan efficiënte oplossingen. Nieuwe uitdagingen zie ik als kansen om mijn kennis te verdiepen en mijn vaardigheden te versterken.</p>
+              
+              <ul class="list-inline socials mt-3">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/samira-vandormael-81114630a/?trk=PROFILE_DROP_DOWN" target="_blank">
+                    <i class="bi bi-linkedin fs-3"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/SamiraVandormael" target="_blank">
+                    <i class="bi bi-github fs-3"></i>
+                  </a>
+                </li>
+              </ul>
+              <a href="contact.html" class="btn btn-main mt-3">Neem contact op</a>
+            </section>
+          </article>
+        </div>
 
+        <!-- ASIDE -->
+        <aside class="col-lg-3">
+          <h3>Contact Info</h3>
+          
+          <div class="info-item">
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:sa.vandormael@gmail.com">Email</a>
+          </div>
+
+          <div class="info-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Antwerpen, BE</span>
+          </div>
+
+          <div class="info-item">
+            <i class="bi bi-calendar-check"></i>
+            <span>Beschikbaar</span>
+          </div>
+
+          <a href="#" class="btn btn-main mt-3">
+            <i class="bi bi-download"></i>
+            Download CV
+          </a>
+
+          <div class="mini-social">
+            <a href="https://www.linkedin.com/in/samira-vandormael-81114630a" target="_blank" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/SamiraVandormael" target="_blank" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="mailto:sa.vandormael@gmail.com" title="Email">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+          <img src="Assets/foto.jpg" class="img-fluid rounded mt-3" alt="Samira Vandormael">
+        </aside>
+      </div>
+    </div>
+  </section>
 <!-- FOOTER -->
   <footer class="footer">
   <p class="mb-1">© <span id="year"></span> <span class="footer-name">Samira Vandormael</span></p>
@@ -94,7 +133,7 @@
 </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>

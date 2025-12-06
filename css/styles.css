@@ -374,3 +374,161 @@ p {
   gap: 1rem;
   color: #4a5030;
 }
+
+/* ASIDE */
+aside {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  align-self: flex-start;
+}
+
+aside h3 {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  aside {
+    margin-top: 3rem;
+  }
+}
+
+
+/* COMPACT INFO ITEMS */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  background: var(--beige);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: var(--green);
+  color: white;
+  transform: translateX(3px);
+}
+
+.info-item i {
+  color: var(--green);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.info-item:hover i {
+  color: white;
+}
+
+.info-item a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.info-item:hover a {
+  color: white;
+}
+
+/* MINI SOCIAL LINKS */
+.mini-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--beige);
+}
+
+.mini-social a {
+  width: 40px;
+  height: 40px;
+  background: var(--beige);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.mini-social a:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* CV DOWNLOAD BUTTON */
+.compact-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--green);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.compact-btn:hover {
+  background: var(--dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.compact-btn i {
+  margin-right: 0.5rem;
+}
+
+
+/* Projecten */
+.info-item {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.info-item.active {
+  font-weight: 600;
+}
+
+/* CAROUSEL */
+/* CAROUSEL STYLING */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--green);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+
+
+
