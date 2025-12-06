@@ -266,7 +266,8 @@ p {
   font-weight: 500;
 }
 
-.project-section {
+.project-section,
+.space {
   margin-bottom: 4rem;
 }
 
@@ -383,6 +384,7 @@ aside {
   box-shadow: 0 3px 15px rgba(0,0,0,0.08);
   align-self: flex-start;
   width: 100%;
+  margin-top: 3rem;
 }
 
 aside h3 {
@@ -393,7 +395,7 @@ aside h3 {
   text-align: center;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   aside {
     margin-top: 3rem;
   }
